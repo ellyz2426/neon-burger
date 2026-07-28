@@ -4,11 +4,25 @@
     "type": "custom",
     "children": [
       {
-        "sourceTag": "text",
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "ACHIEVEMENTS"
+        ],
+        "properties": {
+          "fontSize": "24",
+          "fontWeight": "bold",
+          "color": "#ffcc00",
+          "marginBottom": "6"
+        },
+        "dataUid": "uid-2"
+      },
+      {
+        "sourceTag": "panel",
         "type": "custom",
         "children": [
           {
-            "sourceTag": "text",
+            "sourceTag": "panel",
             "type": "custom",
             "children": [
               {
@@ -16,207 +30,385 @@
                 "type": "custom",
                 "children": [
                   {
-                    "sourceTag": "text",
-                    "type": "custom",
+                    "type": "container",
+                    "sourceTag": "div",
                     "children": [
-                      {
-                        "sourceTag": "text",
-                        "type": "custom",
-                        "children": [
-                          {
-                            "sourceTag": "text",
-                            "type": "custom",
-                            "children": [
-                              {
-                                "sourceTag": "text",
-                                "type": "custom",
-                                "children": [
-                                  {
-                                    "sourceTag": "text",
-                                    "type": "custom",
-                                    "children": [
-                                      {
-                                        "sourceTag": "text",
-                                        "type": "custom",
-                                        "children": [
-                                          {
-                                            "sourceTag": "text",
-                                            "type": "custom",
-                                            "children": [
-                                              {
-                                                "sourceTag": "text",
-                                                "type": "custom",
-                                                "children": [
-                                                  {
-                                                    "sourceTag": "text",
-                                                    "type": "custom",
-                                                    "children": [
-                                                      {
-                                                        "sourceTag": "text",
-                                                        "type": "custom",
-                                                        "children": [],
-                                                        "properties": {
-                                                          "id": "achv-9",
-                                                          "content": "[ ] Burger King - Make 50 burgers total",
-                                                          "fontsize": "9",
-                                                          "color": "#88ccaa"
-                                                        },
-                                                        "dataUid": "uid-14"
-                                                      }
-                                                    ],
-                                                    "properties": {
-                                                      "id": "achv-8",
-                                                      "content": "[ ] No Deaths - Complete a level without dying",
-                                                      "fontsize": "9",
-                                                      "color": "#88ccaa"
-                                                    },
-                                                    "dataUid": "uid-13"
-                                                  }
-                                                ],
-                                                "properties": {
-                                                  "id": "achv-7",
-                                                  "content": "[ ] Zen Master - Play 5 zen mode games",
-                                                  "fontsize": "9",
-                                                  "color": "#88ccaa"
-                                                },
-                                                "dataUid": "uid-12"
-                                              }
-                                            ],
-                                            "properties": {
-                                              "id": "achv-6",
-                                              "content": "[ ] Speed Demon - Complete speed run mode",
-                                              "fontsize": "9",
-                                              "color": "#88ccaa"
-                                            },
-                                            "dataUid": "uid-11"
-                                          }
-                                        ],
-                                        "properties": {
-                                          "id": "achv-5",
-                                          "content": "[ ] Score 10K - Score 10000 points",
-                                          "fontsize": "9",
-                                          "color": "#88ccaa"
-                                        },
-                                        "dataUid": "uid-10"
-                                      }
-                                    ],
-                                    "properties": {
-                                      "id": "achv-4",
-                                      "content": "[ ] Level 5 - Reach level 5",
-                                      "fontsize": "9",
-                                      "color": "#88ccaa"
-                                    },
-                                    "dataUid": "uid-9"
-                                  }
-                                ],
-                                "properties": {
-                                  "id": "achv-3",
-                                  "content": "[ ] Pepper Pro - Stun 10 enemies total",
-                                  "fontsize": "9",
-                                  "color": "#88ccaa"
-                                },
-                                "dataUid": "uid-8"
-                              }
-                            ],
-                            "properties": {
-                              "id": "achv-2",
-                              "content": "[ ] Crusher - Crush an enemy with an ingredient",
-                              "fontsize": "9",
-                              "color": "#88ccaa"
-                            },
-                            "dataUid": "uid-7"
-                          }
-                        ],
-                        "properties": {
-                          "id": "achv-1",
-                          "content": "[ ] Hot Streak - Get a 3x combo",
-                          "fontsize": "9",
-                          "color": "#88ccaa"
-                        },
-                        "dataUid": "uid-6"
-                      }
+                      "First Steps"
                     ],
                     "properties": {
-                      "id": "achv-0",
-                      "content": "[ ] First Burger - Complete your first burger",
-                      "fontsize": "9",
-                      "color": "#88ccaa"
+                      "id": "achv-0-name",
+                      "fontSize": "11",
+                      "fontWeight": "bold",
+                      "color": "#ffcc00"
                     },
-                    "dataUid": "uid-5"
+                    "dataUid": "uid-6"
+                  },
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Complete your first burger"
+                    ],
+                    "properties": {
+                      "id": "achv-0-desc",
+                      "fontSize": "9",
+                      "color": "#888888"
+                    },
+                    "dataUid": "uid-7"
                   }
                 ],
                 "properties": {
-                  "width": "360",
-                  "backgroundcolor": "#001a0a",
-                  "borderradius": "6",
-                  "padding": "8",
-                  "flexdirection": "column",
-                  "gap": "4"
+                  "flexDirection": "column",
+                  "gap": "1"
                 },
-                "dataUid": "uid-4"
+                "dataUid": "uid-5"
               },
+              {
+                "type": "container",
+                "sourceTag": "div",
+                "children": [
+                  "[LOCKED]"
+                ],
+                "properties": {
+                  "id": "achv-0-status",
+                  "fontSize": "9",
+                  "color": "#00ffcc"
+                },
+                "dataUid": "uid-8"
+              }
+            ],
+            "properties": {
+              "width": "370",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "padding": "4",
+              "backgroundColor": "#001a0a",
+              "borderRadius": "4"
+            },
+            "dataUid": "uid-4"
+          },
+          {
+            "sourceTag": "panel",
+            "type": "custom",
+            "children": [
               {
                 "sourceTag": "panel",
                 "type": "custom",
                 "children": [
                   {
-                    "sourceTag": "text",
-                    "type": "custom",
-                    "children": [],
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Pepper Pro"
+                    ],
                     "properties": {
-                      "content": "BACK",
-                      "fontsize": "12",
+                      "id": "achv-1-name",
+                      "fontSize": "11",
+                      "fontWeight": "bold",
                       "color": "#ffcc00"
                     },
-                    "dataUid": "uid-16"
+                    "dataUid": "uid-11"
+                  },
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Stun 10 enemies"
+                    ],
+                    "properties": {
+                      "id": "achv-1-desc",
+                      "fontSize": "9",
+                      "color": "#888888"
+                    },
+                    "dataUid": "uid-12"
                   }
                 ],
                 "properties": {
-                  "id": "btn-achv-back",
-                  "width": "200",
-                  "height": "36",
-                  "backgroundcolor": "#001a0a",
-                  "borderradius": "4",
-                  "bordercolor": "#ffcc00",
-                  "borderwidth": "1",
-                  "alignitems": "center",
-                  "justifycontent": "center",
-                  "cursor": "pointer",
-                  "margintop": "8"
+                  "flexDirection": "column",
+                  "gap": "1"
                 },
-                "dataUid": "uid-15"
+                "dataUid": "uid-10"
+              },
+              {
+                "type": "container",
+                "sourceTag": "div",
+                "children": [
+                  "[LOCKED]"
+                ],
+                "properties": {
+                  "id": "achv-1-status",
+                  "fontSize": "9",
+                  "color": "#00ffcc"
+                },
+                "dataUid": "uid-13"
               }
             ],
             "properties": {
-              "id": "achv-count",
-              "content": "0 / 20",
-              "fontsize": "12",
-              "color": "#88ccaa",
-              "marginbottom": "6"
+              "width": "370",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "padding": "4",
+              "backgroundColor": "#001a0a",
+              "borderRadius": "4"
             },
-            "dataUid": "uid-3"
+            "dataUid": "uid-9"
+          },
+          {
+            "sourceTag": "panel",
+            "type": "custom",
+            "children": [
+              {
+                "sourceTag": "panel",
+                "type": "custom",
+                "children": [
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Combo King"
+                    ],
+                    "properties": {
+                      "id": "achv-2-name",
+                      "fontSize": "11",
+                      "fontWeight": "bold",
+                      "color": "#ffcc00"
+                    },
+                    "dataUid": "uid-16"
+                  },
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Get a 5x combo"
+                    ],
+                    "properties": {
+                      "id": "achv-2-desc",
+                      "fontSize": "9",
+                      "color": "#888888"
+                    },
+                    "dataUid": "uid-17"
+                  }
+                ],
+                "properties": {
+                  "flexDirection": "column",
+                  "gap": "1"
+                },
+                "dataUid": "uid-15"
+              },
+              {
+                "type": "container",
+                "sourceTag": "div",
+                "children": [
+                  "[LOCKED]"
+                ],
+                "properties": {
+                  "id": "achv-2-status",
+                  "fontSize": "9",
+                  "color": "#00ffcc"
+                },
+                "dataUid": "uid-18"
+              }
+            ],
+            "properties": {
+              "width": "370",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "padding": "4",
+              "backgroundColor": "#001a0a",
+              "borderRadius": "4"
+            },
+            "dataUid": "uid-14"
+          },
+          {
+            "sourceTag": "panel",
+            "type": "custom",
+            "children": [
+              {
+                "sourceTag": "panel",
+                "type": "custom",
+                "children": [
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Level 5"
+                    ],
+                    "properties": {
+                      "id": "achv-3-name",
+                      "fontSize": "11",
+                      "fontWeight": "bold",
+                      "color": "#ffcc00"
+                    },
+                    "dataUid": "uid-21"
+                  },
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Reach level 5"
+                    ],
+                    "properties": {
+                      "id": "achv-3-desc",
+                      "fontSize": "9",
+                      "color": "#888888"
+                    },
+                    "dataUid": "uid-22"
+                  }
+                ],
+                "properties": {
+                  "flexDirection": "column",
+                  "gap": "1"
+                },
+                "dataUid": "uid-20"
+              },
+              {
+                "type": "container",
+                "sourceTag": "div",
+                "children": [
+                  "[LOCKED]"
+                ],
+                "properties": {
+                  "id": "achv-3-status",
+                  "fontSize": "9",
+                  "color": "#00ffcc"
+                },
+                "dataUid": "uid-23"
+              }
+            ],
+            "properties": {
+              "width": "370",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "padding": "4",
+              "backgroundColor": "#001a0a",
+              "borderRadius": "4"
+            },
+            "dataUid": "uid-19"
+          },
+          {
+            "sourceTag": "panel",
+            "type": "custom",
+            "children": [
+              {
+                "sourceTag": "panel",
+                "type": "custom",
+                "children": [
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Speed Demon"
+                    ],
+                    "properties": {
+                      "id": "achv-4-name",
+                      "fontSize": "11",
+                      "fontWeight": "bold",
+                      "color": "#ffcc00"
+                    },
+                    "dataUid": "uid-26"
+                  },
+                  {
+                    "type": "container",
+                    "sourceTag": "div",
+                    "children": [
+                      "Win Speed Run mode"
+                    ],
+                    "properties": {
+                      "id": "achv-4-desc",
+                      "fontSize": "9",
+                      "color": "#888888"
+                    },
+                    "dataUid": "uid-27"
+                  }
+                ],
+                "properties": {
+                  "flexDirection": "column",
+                  "gap": "1"
+                },
+                "dataUid": "uid-25"
+              },
+              {
+                "type": "container",
+                "sourceTag": "div",
+                "children": [
+                  "[LOCKED]"
+                ],
+                "properties": {
+                  "id": "achv-4-status",
+                  "fontSize": "9",
+                  "color": "#00ffcc"
+                },
+                "dataUid": "uid-28"
+              }
+            ],
+            "properties": {
+              "width": "370",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "alignItems": "center",
+              "padding": "4",
+              "backgroundColor": "#001a0a",
+              "borderRadius": "4"
+            },
+            "dataUid": "uid-24"
           }
         ],
         "properties": {
-          "content": "ACHIEVEMENTS",
-          "fontsize": "24",
-          "fontweight": "bold",
-          "color": "#ffcc00",
-          "marginbottom": "4"
+          "width": "380",
+          "flexDirection": "column",
+          "gap": "4",
+          "overflowY": "scroll",
+          "flexGrow": "1"
         },
-        "dataUid": "uid-2"
+        "dataUid": "uid-3"
+      },
+      {
+        "sourceTag": "panel",
+        "type": "custom",
+        "children": [
+          {
+            "type": "container",
+            "sourceTag": "div",
+            "children": [
+              "BACK"
+            ],
+            "properties": {
+              "fontSize": "14",
+              "color": "#ffcc00"
+            },
+            "dataUid": "uid-30"
+          }
+        ],
+        "properties": {
+          "id": "btn-achv-back",
+          "width": "240",
+          "height": "36",
+          "backgroundColor": "#001a0a",
+          "borderRadius": "6",
+          "borderColor": "#ffcc00",
+          "borderWidth": "1",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "cursor": "pointer",
+          "marginTop": "6"
+        },
+        "dataUid": "uid-29"
       }
     ],
     "properties": {
-      "width": "400",
-      "height": "460",
-      "backgroundcolor": "#000a18",
-      "backgroundopacity": "0.95",
-      "borderradius": "12",
-      "bordercolor": "#ffcc00",
-      "borderwidth": "2",
-      "flexdirection": "column",
-      "alignitems": "center",
+      "width": "420",
+      "height": "500",
+      "backgroundColor": "#000a18",
+      "backgroundOpacity": "0.95",
+      "borderRadius": "12",
+      "borderColor": "#ffcc00",
+      "borderWidth": "2",
+      "flexDirection": "column",
+      "alignItems": "center",
       "padding": "16",
       "gap": "4"
     },
@@ -230,7 +422,7 @@
         "column": 0
       },
       "end": {
-        "line": 18,
+        "line": 42,
         "column": 8
       }
     },
@@ -240,8 +432,8 @@
         "column": 2
       },
       "end": {
-        "line": 18,
-        "column": 0
+        "line": 1,
+        "column": 93
       }
     },
     "uid-3": {
@@ -250,138 +442,278 @@
         "column": 2
       },
       "end": {
-        "line": 18,
-        "column": 0
+        "line": 38,
+        "column": 10
       }
     },
     "uid-4": {
       "start": {
         "line": 3,
-        "column": 2
+        "column": 4
       },
       "end": {
-        "line": 14,
-        "column": 10
+        "line": 9,
+        "column": 12
       }
     },
     "uid-5": {
       "start": {
         "line": 4,
-        "column": 4
+        "column": 6
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 7,
+        "column": 14
       }
     },
     "uid-6": {
       "start": {
         "line": 5,
-        "column": 4
+        "column": 8
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 5,
+        "column": 97
       }
     },
     "uid-7": {
       "start": {
         "line": 6,
-        "column": 4
+        "column": 8
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 6,
+        "column": 92
       }
     },
     "uid-8": {
       "start": {
-        "line": 7,
-        "column": 4
+        "line": 8,
+        "column": 6
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 8,
+        "column": 74
       }
     },
     "uid-9": {
-      "start": {
-        "line": 8,
-        "column": 4
-      },
-      "end": {
-        "line": 14,
-        "column": 2
-      }
-    },
-    "uid-10": {
-      "start": {
-        "line": 9,
-        "column": 4
-      },
-      "end": {
-        "line": 14,
-        "column": 2
-      }
-    },
-    "uid-11": {
       "start": {
         "line": 10,
         "column": 4
       },
       "end": {
+        "line": 16,
+        "column": 12
+      }
+    },
+    "uid-10": {
+      "start": {
+        "line": 11,
+        "column": 6
+      },
+      "end": {
         "line": 14,
-        "column": 2
+        "column": 14
+      }
+    },
+    "uid-11": {
+      "start": {
+        "line": 12,
+        "column": 8
+      },
+      "end": {
+        "line": 12,
+        "column": 96
       }
     },
     "uid-12": {
       "start": {
-        "line": 11,
-        "column": 4
+        "line": 13,
+        "column": 8
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 13,
+        "column": 81
       }
     },
     "uid-13": {
       "start": {
-        "line": 12,
-        "column": 4
+        "line": 15,
+        "column": 6
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 15,
+        "column": 74
       }
     },
     "uid-14": {
       "start": {
-        "line": 13,
+        "line": 17,
         "column": 4
       },
       "end": {
-        "line": 14,
-        "column": 2
+        "line": 23,
+        "column": 12
       }
     },
     "uid-15": {
       "start": {
-        "line": 15,
-        "column": 2
+        "line": 18,
+        "column": 6
       },
       "end": {
-        "line": 17,
-        "column": 10
+        "line": 21,
+        "column": 14
       }
     },
     "uid-16": {
       "start": {
-        "line": 16,
+        "line": 19,
+        "column": 8
+      },
+      "end": {
+        "line": 19,
+        "column": 96
+      }
+    },
+    "uid-17": {
+      "start": {
+        "line": 20,
+        "column": 8
+      },
+      "end": {
+        "line": 20,
+        "column": 80
+      }
+    },
+    "uid-18": {
+      "start": {
+        "line": 22,
+        "column": 6
+      },
+      "end": {
+        "line": 22,
+        "column": 74
+      }
+    },
+    "uid-19": {
+      "start": {
+        "line": 24,
         "column": 4
       },
       "end": {
-        "line": 17,
+        "line": 30,
+        "column": 12
+      }
+    },
+    "uid-20": {
+      "start": {
+        "line": 25,
+        "column": 6
+      },
+      "end": {
+        "line": 28,
+        "column": 14
+      }
+    },
+    "uid-21": {
+      "start": {
+        "line": 26,
+        "column": 8
+      },
+      "end": {
+        "line": 26,
+        "column": 93
+      }
+    },
+    "uid-22": {
+      "start": {
+        "line": 27,
+        "column": 8
+      },
+      "end": {
+        "line": 27,
+        "column": 79
+      }
+    },
+    "uid-23": {
+      "start": {
+        "line": 29,
+        "column": 6
+      },
+      "end": {
+        "line": 29,
+        "column": 74
+      }
+    },
+    "uid-24": {
+      "start": {
+        "line": 31,
+        "column": 4
+      },
+      "end": {
+        "line": 37,
+        "column": 12
+      }
+    },
+    "uid-25": {
+      "start": {
+        "line": 32,
+        "column": 6
+      },
+      "end": {
+        "line": 35,
+        "column": 14
+      }
+    },
+    "uid-26": {
+      "start": {
+        "line": 33,
+        "column": 8
+      },
+      "end": {
+        "line": 33,
+        "column": 97
+      }
+    },
+    "uid-27": {
+      "start": {
+        "line": 34,
+        "column": 8
+      },
+      "end": {
+        "line": 34,
+        "column": 84
+      }
+    },
+    "uid-28": {
+      "start": {
+        "line": 36,
+        "column": 6
+      },
+      "end": {
+        "line": 36,
+        "column": 74
+      }
+    },
+    "uid-29": {
+      "start": {
+        "line": 39,
         "column": 2
+      },
+      "end": {
+        "line": 41,
+        "column": 10
+      }
+    },
+    "uid-30": {
+      "start": {
+        "line": 40,
+        "column": 4
+      },
+      "end": {
+        "line": 40,
+        "column": 50
       }
     }
   }

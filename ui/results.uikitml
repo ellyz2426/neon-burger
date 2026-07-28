@@ -1,15 +1,17 @@
-<panel width="400" height="380" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#00ffcc" borderWidth="2" flexDirection="column" alignItems="center" padding="20" gap="8">
-  <text content="GAME OVER" fontSize="28" fontWeight="bold" color="#ff4444" marginBottom="4"/>
-  <panel width="340" backgroundColor="#001a0a" borderRadius="6" padding="12" flexDirection="column" gap="6">
-    <text id="res-score" content="Score: 0" fontSize="16" fontWeight="bold" color="#00ffcc"/>
-    <text id="res-level" content="Level: 1" fontSize="14" color="#88ccaa"/>
-    <text id="res-combo" content="Best Combo: x0" fontSize="14" color="#ffcc00"/>
-    <text id="res-best" content="Best Score: 0" fontSize="14" color="#cc88ff"/>
-  </panel>
-  <panel id="btn-retry" width="240" height="44" backgroundColor="#00ffcc" borderRadius="6" alignItems="center" justifyContent="center" cursor="pointer" marginTop="8">
-    <text content="PLAY AGAIN" fontSize="16" fontWeight="bold" color="#001a0a"/>
-  </panel>
-  <panel id="btn-menu" width="240" height="40" backgroundColor="#004433" borderRadius="6" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-    <text content="MAIN MENU" fontSize="13" color="#00ffcc"/>
+<panel width="380" height="420" background-color="#000a18" background-opacity="0.95" border-radius="12" border-color="#00ffcc" border-width="2" flex-direction="column" align-items="center" padding="20" gap="8">
+  <div id="results-title" font-size="28" font-weight="bold" color="#ff4444" margin-bottom="4">GAME OVER</div>
+  <div id="results-new" font-size="16" font-weight="bold" color="#ffcc00"></div>
+  <div id="results-score" font-size="18" color="#00ffcc" margin-top="8">FINAL SCORE: 0</div>
+  <div id="results-level" font-size="14" color="#ffffff">LEVEL REACHED: 1</div>
+  <div id="results-burgers" font-size="14" color="#ff8800">BURGERS: 0</div>
+  <div id="results-enemies" font-size="14" color="#cc88ff">ENEMIES STUNNED: 0</div>
+  <div id="results-high" font-size="14" color="#ffcc00" margin-top="8">HIGH SCORE: 0</div>
+  <panel width="280" flex-direction="row" justify-content="space-between" gap="8" margin-top="12">
+    <panel id="btn-retry" width="132" height="44" background-color="#00ffcc" border-radius="6" align-items="center" justify-content="center" cursor="pointer">
+      <div font-size="14" font-weight="bold" color="#001a0a">RETRY</div>
+    </panel>
+    <panel id="btn-results-menu" width="132" height="44" background-color="#004433" border-radius="6" border-color="#00ffcc" border-width="1" align-items="center" justify-content="center" cursor="pointer">
+      <div font-size="14" color="#00ffcc">MENU</div>
+    </panel>
   </panel>
 </panel>

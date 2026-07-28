@@ -1,19 +1,43 @@
-<panel width="400" height="460" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#ffcc00" borderWidth="2" flexDirection="column" alignItems="center" padding="16" gap="4">
-  <text content="ACHIEVEMENTS" fontSize="24" fontWeight="bold" color="#ffcc00" marginBottom="4"/>
-  <text id="achv-count" content="0 / 20" fontSize="12" color="#88ccaa" marginBottom="6"/>
-  <panel width="360" backgroundColor="#001a0a" borderRadius="6" padding="8" flexDirection="column" gap="4">
-    <text id="achv-0" content="[ ] First Burger - Complete your first burger" fontSize="9" color="#88ccaa"/>
-    <text id="achv-1" content="[ ] Hot Streak - Get a 3x combo" fontSize="9" color="#88ccaa"/>
-    <text id="achv-2" content="[ ] Crusher - Crush an enemy with an ingredient" fontSize="9" color="#88ccaa"/>
-    <text id="achv-3" content="[ ] Pepper Pro - Stun 10 enemies total" fontSize="9" color="#88ccaa"/>
-    <text id="achv-4" content="[ ] Level 5 - Reach level 5" fontSize="9" color="#88ccaa"/>
-    <text id="achv-5" content="[ ] Score 10K - Score 10000 points" fontSize="9" color="#88ccaa"/>
-    <text id="achv-6" content="[ ] Speed Demon - Complete speed run mode" fontSize="9" color="#88ccaa"/>
-    <text id="achv-7" content="[ ] Zen Master - Play 5 zen mode games" fontSize="9" color="#88ccaa"/>
-    <text id="achv-8" content="[ ] No Deaths - Complete a level without dying" fontSize="9" color="#88ccaa"/>
-    <text id="achv-9" content="[ ] Burger King - Make 50 burgers total" fontSize="9" color="#88ccaa"/>
+<panel width="420" height="500" background-color="#000a18" background-opacity="0.95" border-radius="12" border-color="#ffcc00" border-width="2" flex-direction="column" align-items="center" padding="16" gap="4">
+  <div font-size="24" font-weight="bold" color="#ffcc00" margin-bottom="6">ACHIEVEMENTS</div>
+  <panel width="380" flex-direction="column" gap="4" overflow-y="scroll" flex-grow="1">
+    <panel width="370" flex-direction="row" justify-content="space-between" align-items="center" padding="4" background-color="#001a0a" border-radius="4">
+      <panel flex-direction="column" gap="1">
+        <div id="achv-0-name" font-size="11" font-weight="bold" color="#ffcc00">First Steps</div>
+        <div id="achv-0-desc" font-size="9" color="#888888">Complete your first burger</div>
+      </panel>
+      <div id="achv-0-status" font-size="9" color="#00ffcc">[LOCKED]</div>
+    </panel>
+    <panel width="370" flex-direction="row" justify-content="space-between" align-items="center" padding="4" background-color="#001a0a" border-radius="4">
+      <panel flex-direction="column" gap="1">
+        <div id="achv-1-name" font-size="11" font-weight="bold" color="#ffcc00">Pepper Pro</div>
+        <div id="achv-1-desc" font-size="9" color="#888888">Stun 10 enemies</div>
+      </panel>
+      <div id="achv-1-status" font-size="9" color="#00ffcc">[LOCKED]</div>
+    </panel>
+    <panel width="370" flex-direction="row" justify-content="space-between" align-items="center" padding="4" background-color="#001a0a" border-radius="4">
+      <panel flex-direction="column" gap="1">
+        <div id="achv-2-name" font-size="11" font-weight="bold" color="#ffcc00">Combo King</div>
+        <div id="achv-2-desc" font-size="9" color="#888888">Get a 5x combo</div>
+      </panel>
+      <div id="achv-2-status" font-size="9" color="#00ffcc">[LOCKED]</div>
+    </panel>
+    <panel width="370" flex-direction="row" justify-content="space-between" align-items="center" padding="4" background-color="#001a0a" border-radius="4">
+      <panel flex-direction="column" gap="1">
+        <div id="achv-3-name" font-size="11" font-weight="bold" color="#ffcc00">Level 5</div>
+        <div id="achv-3-desc" font-size="9" color="#888888">Reach level 5</div>
+      </panel>
+      <div id="achv-3-status" font-size="9" color="#00ffcc">[LOCKED]</div>
+    </panel>
+    <panel width="370" flex-direction="row" justify-content="space-between" align-items="center" padding="4" background-color="#001a0a" border-radius="4">
+      <panel flex-direction="column" gap="1">
+        <div id="achv-4-name" font-size="11" font-weight="bold" color="#ffcc00">Speed Demon</div>
+        <div id="achv-4-desc" font-size="9" color="#888888">Win Speed Run mode</div>
+      </panel>
+      <div id="achv-4-status" font-size="9" color="#00ffcc">[LOCKED]</div>
+    </panel>
   </panel>
-  <panel id="btn-achv-back" width="200" height="36" backgroundColor="#001a0a" borderRadius="4" borderColor="#ffcc00" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer" marginTop="8">
-    <text content="BACK" fontSize="12" color="#ffcc00"/>
+  <panel id="btn-achv-back" width="240" height="36" background-color="#001a0a" border-radius="6" border-color="#ffcc00" border-width="1" align-items="center" justify-content="center" cursor="pointer" margin-top="6">
+    <div font-size="14" color="#ffcc00">BACK</div>
   </panel>
 </panel>

@@ -1,260 +1,208 @@
-// Neon Burger VR — UI system (PanelUI spatial panels)
-import {
-  createSystem,
-  PanelUI,
-  PanelDocument,
-  UIKitDocument,
-  UIKit,
-} from '@iwsdk/core';
+import { createSystem, PanelUI, PanelDocument } from '@iwsdk/core';
 import { Group } from 'three';
-import {
-  gameState,
-  ACHIEVEMENTS,
-  COLOR_NAMES,
-  GameMode,
-  Difficulty,
-} from './game-state.js';
-
-type Screen =
-  | 'menu'
-  | 'playing'
-  | 'paused'
-  | 'results'
-  | 'settings'
-  | 'tutorial'
-  | 'stats'
-  | 'achievements'
-  | 'newgame'
-  | 'nextlevel';
+import { Text, Container } from '@pmndrs/uikit';
+import { gameState, ACHIEVEMENTS } from './game-state.js';
 
 interface PanelEntry {
-  entity: any;
-  group: Group;
-  doc: UIKitDocument | null;
-  bound: boolean;
+  doc: any;
+  name: string;
+  object3D: any;
 }
-
-// Panel Z positions: camera at Z=1.0, game field at Z=-3.5
-const OVERLAY_Z = -0.6;
-const HUD_Y = 3.4;
-const HUD_Z = -3.5;
-
-const PANEL_CONFIGS: Record<string, { config: string; y: number; z: number }> = {
-  menu: { config: './ui/menu.json', y: 1.8, z: OVERLAY_Z },
-  hud: { config: './ui/hud.json', y: HUD_Y, z: HUD_Z },
-  pause: { config: './ui/pause.json', y: 1.8, z: OVERLAY_Z },
-  results: { config: './ui/results.json', y: 1.8, z: OVERLAY_Z },
-  settings: { config: './ui/settings.json', y: 1.8, z: OVERLAY_Z },
-  tutorial: { config: './ui/tutorial.json', y: 1.8, z: OVERLAY_Z },
-  stats: { config: './ui/stats.json', y: 1.8, z: OVERLAY_Z },
-  achv: { config: './ui/achv.json', y: 1.8, z: OVERLAY_Z },
-};
 
 export class UISystem extends createSystem({
   panels: { required: [PanelUI, PanelDocument] },
 }) {
-  private entries: Record<string, PanelEntry> = {};
-  private lastScreen: Screen = 'menu';
+  private panelMap: Map<string, PanelEntry> = new Map();
+  private currentScreen = 'menu';
+  private loadedCount = 0;
+  private fc = 0;
+
+  private panelConfigs = [
+    'menu', 'hud', 'pause', 'results', 'settings', 'tutorial', 'stats', 'achv'
+  ];
 
   init() {
-    for (const [name, cfg] of Object.entries(PANEL_CONFIGS)) {
-      const group = new Group();
-      group.position.set(0, cfg.y, cfg.z);
-      group.visible = name === 'menu';
-      const entity = (this.world as any).createTransformEntity(group);
-      entity.addComponent(PanelUI, { config: cfg.config });
-      this.entries[name] = { entity, group, doc: null, bound: false };
+    for (const name of this.panelConfigs) {
+      const g = new Group();
+      g.position.set(0, 2.0, -1.0);
+      g.visible = (name === 'menu');
+      const entity = (this.world as any).createTransformEntity(g);
+      entity.addComponent(PanelUI, { config: `./ui/${name}.json` });
     }
 
-    this.queries.panels.subscribe('qualify', (entity: any) => {
-      for (const [name, entry] of Object.entries(this.entries)) {
-        if (entity.index === entry.entity.index && !entry.bound) {
-          const doc = PanelDocument.data.document[entity.index] as UIKitDocument;
-          if (!doc) return;
-          entry.doc = doc;
-          entry.bound = true;
-          this.bindPanel(name, doc);
-        }
+    (this as any).queries.panels.subscribe('qualify', (e: any) => {
+      const doc = PanelDocument.data.document[e.index];
+      const config = PanelUI.data.config[e.index];
+      const name = config.replace('./ui/', '').replace('.json', '');
+      this.panelMap.set(name, { doc, name, object3D: e.object3D });
+      this.loadedCount++;
+      if (this.loadedCount === this.panelConfigs.length) {
+        this.wireButtons();
       }
     });
   }
 
-  private bindPanel(name: string, doc: UIKitDocument) {
-    switch (name) {
-      case 'menu': this.bindMenu(doc); break;
-      case 'pause': this.bindPause(doc); break;
-      case 'results': this.bindResults(doc); break;
-      case 'settings': this.bindSettings(doc); break;
-      case 'tutorial': this.bindTutorial(doc); break;
-      case 'stats': this.bindStats(doc); break;
-      case 'achv': this.bindAchievements(doc); break;
-    }
-  }
-
-  private bindMenu(doc: UIKitDocument) {
-    const startMode = (mode: GameMode) => {
-      gameState.mode = mode;
+  private wireButtons() {
+    const startGame = (mode: string) => {
+      gameState.mode = mode as any;
       gameState.screen = 'newgame';
     };
-    this.addClick(doc, 'btn-arcade', () => startMode('arcade'));
-    this.addClick(doc, 'btn-speed', () => startMode('speed'));
-    this.addClick(doc, 'btn-zen', () => startMode('zen'));
-    this.addClick(doc, 'btn-challenge', () => startMode('challenge'));
-    this.addClick(doc, 'btn-tutorial', () => { gameState.screen = 'tutorial' as any; });
-    this.addClick(doc, 'btn-settings', () => { gameState.screen = 'settings' as any; });
-    this.addClick(doc, 'btn-stats', () => { gameState.screen = 'stats' as any; });
-    this.addClick(doc, 'btn-achv', () => { gameState.screen = 'achievements' as any; });
-  }
 
-  private bindPause(doc: UIKitDocument) {
-    this.addClick(doc, 'btn-resume', () => { gameState.screen = 'playing'; });
-    this.addClick(doc, 'btn-quit', () => { gameState.screen = 'menu'; });
-  }
+    this.wireBtn('menu', 'btn-arcade', () => startGame('arcade'));
+    this.wireBtn('menu', 'btn-speed', () => startGame('speed'));
+    this.wireBtn('menu', 'btn-zen', () => startGame('zen'));
+    this.wireBtn('menu', 'btn-challenge', () => startGame('challenge'));
+    this.wireBtn('menu', 'btn-tutorial', () => { gameState.screen = 'tutorial'; });
+    this.wireBtn('menu', 'btn-settings', () => { gameState.screen = 'settings'; });
+    this.wireBtn('menu', 'btn-stats', () => { gameState.screen = 'stats'; });
+    this.wireBtn('menu', 'btn-achv', () => { gameState.screen = 'achievements'; });
 
-  private bindResults(doc: UIKitDocument) {
-    this.addClick(doc, 'btn-retry', () => { gameState.screen = 'newgame'; });
-    this.addClick(doc, 'btn-menu', () => { gameState.screen = 'menu'; });
-  }
+    this.wireBtn('pause', 'btn-resume', () => { gameState.screen = 'playing'; });
+    this.wireBtn('pause', 'btn-restart', () => { gameState.screen = 'newgame'; });
+    this.wireBtn('pause', 'btn-quit', () => { gameState.screen = 'menu'; });
 
-  private bindSettings(doc: UIKitDocument) {
-    const setDiff = (d: Difficulty) => {
-      gameState.difficulty = d;
-      this.updateSettingsText(doc);
-    };
-    this.addClick(doc, 'btn-diff-normal', () => setDiff('normal'));
-    this.addClick(doc, 'btn-diff-hard', () => setDiff('hard'));
-    this.addClick(doc, 'btn-diff-insane', () => setDiff('insane'));
-    this.addClick(doc, 'btn-sound', () => {
+    this.wireBtn('results', 'btn-retry', () => { gameState.screen = 'newgame'; });
+    this.wireBtn('results', 'btn-results-menu', () => { gameState.screen = 'menu'; });
+
+    this.wireBtn('settings', 'btn-sfx-toggle', () => {
       gameState.soundEnabled = !gameState.soundEnabled;
       gameState.saveStats();
-      this.updateSettingsText(doc);
     });
-    this.addClick(doc, 'btn-music', () => {
+    this.wireBtn('settings', 'btn-music-toggle', () => {
       gameState.musicEnabled = !gameState.musicEnabled;
       gameState.saveStats();
-      this.updateSettingsText(doc);
     });
-    this.addClick(doc, 'btn-color', () => {
-      gameState.colorScheme = (gameState.colorScheme + 1) % COLOR_NAMES.length;
-      gameState.saveStats();
-      this.updateSettingsText(doc);
-    });
-    this.addClick(doc, 'btn-settings-back', () => { gameState.screen = 'menu'; });
+    this.wireBtn('settings', 'btn-settings-back', () => { gameState.screen = 'menu'; });
+
+    this.wireBtn('tutorial', 'btn-tutorial-back', () => { gameState.screen = 'menu'; });
+    this.wireBtn('stats', 'btn-stats-back', () => { gameState.screen = 'menu'; });
+    this.wireBtn('achv', 'btn-achv-back', () => { gameState.screen = 'menu'; });
   }
 
-  private bindTutorial(doc: UIKitDocument) {
-    this.addClick(doc, 'btn-tutorial-back', () => { gameState.screen = 'menu'; });
-  }
-
-  private bindStats(doc: UIKitDocument) {
-    this.addClick(doc, 'btn-stats-back', () => { gameState.screen = 'menu'; });
-  }
-
-  private bindAchievements(doc: UIKitDocument) {
-    this.addClick(doc, 'btn-achv-back', () => { gameState.screen = 'menu'; });
-  }
-
-  private addClick(doc: UIKitDocument, id: string, handler: () => void) {
-    const el = doc.getElementById(id) as UIKit.Text | undefined;
-    el?.addEventListener('click', handler);
-  }
-
-  private setText(doc: UIKitDocument, id: string, text: string) {
-    const el = doc.getElementById(id) as UIKit.Text | undefined;
-    el?.setProperties({ text });
-  }
-
-  private updateSettingsText(doc: UIKitDocument) {
-    this.setText(doc, 'set-diff', 'Difficulty: ' + gameState.difficulty.toUpperCase());
-    this.setText(doc, 'set-sound', 'Sound: ' + (gameState.soundEnabled ? 'ON' : 'OFF'));
-    this.setText(doc, 'set-music', 'Music: ' + (gameState.musicEnabled ? 'ON' : 'OFF'));
-    this.setText(doc, 'set-color', 'Color: ' + (COLOR_NAMES[gameState.colorScheme] || 'CYAN'));
-  }
-
-  update() {
-    const screen = gameState.screen as Screen;
-    if (screen !== this.lastScreen) {
-      this.lastScreen = screen;
-      this.updateVisibility(screen);
-      this.onScreenEnter(screen);
+  private wireBtn(panelName: string, btnId: string, handler: () => void) {
+    const entry = this.panelMap.get(panelName);
+    if (!entry) return;
+    const btn = entry.doc.getElementById(btnId);
+    if (btn) {
+      btn.addEventListener('click', handler);
     }
-    if (screen === 'playing') {
+  }
+
+  private screenToPanel(screen: string): string | null {
+    switch (screen) {
+      case 'menu': return 'menu';
+      case 'playing': case 'newgame': case 'nextlevel': return 'hud';
+      case 'paused': return 'pause';
+      case 'results': return 'results';
+      case 'settings': return 'settings';
+      case 'tutorial': return 'tutorial';
+      case 'stats': return 'stats';
+      case 'achievements': return 'achv';
+      default: return null;
+    }
+  }
+
+  update(_delta: number) {
+    this.fc++;
+    if (this.loadedCount < this.panelConfigs.length) return;
+
+    if (gameState.screen !== this.currentScreen) {
+      const oldP = this.screenToPanel(this.currentScreen);
+      const newP = this.screenToPanel(gameState.screen);
+
+      if (oldP && oldP !== newP) {
+        const e = this.panelMap.get(oldP);
+        if (e) e.object3D.visible = false;
+      }
+      if (newP) {
+        const e = this.panelMap.get(newP);
+        if (e) e.object3D.visible = true;
+
+        if (newP === 'results') this.updateResults();
+        if (newP === 'stats') this.updateStats();
+        if (newP === 'achv') this.updateAchievements();
+        if (newP === 'settings') this.updateSettings();
+      }
+      this.currentScreen = gameState.screen;
+    }
+
+    if ((gameState.screen === 'playing' || gameState.screen === 'newgame' || gameState.screen === 'nextlevel') && this.fc % 3 === 0) {
       this.updateHUD();
     }
   }
 
-  private updateVisibility(screen: Screen) {
-    const vis: Record<string, boolean> = {
-      menu: screen === 'menu',
-      hud: screen === 'playing',
-      pause: screen === 'paused',
-      results: screen === 'results',
-      settings: (screen as string) === 'settings',
-      tutorial: (screen as string) === 'tutorial',
-      stats: (screen as string) === 'stats',
-      achv: (screen as string) === 'achievements',
-    };
-    for (const [name, entry] of Object.entries(this.entries)) {
-      entry.group.visible = vis[name] || false;
+  private setText(panelName: string, id: string, value: string) {
+    const entry = this.panelMap.get(panelName);
+    if (!entry) return;
+    const el = entry.doc.getElementById(id);
+    if (!el) return;
+    if (el.properties?.signal?.text) {
+      el.properties.signal.text.value = value;
+    } else if (el.children) {
+      for (const c of el.children) {
+        if (c instanceof Text && c.properties?.signal?.text) {
+          c.properties.signal.text.value = value;
+          return;
+        }
+      }
     }
-  }
-
-  private onScreenEnter(screen: Screen) {
-    if ((screen as string) === 'results') this.updateResults();
-    if ((screen as string) === 'settings' && this.entries.settings?.doc) {
-      this.updateSettingsText(this.entries.settings.doc);
-    }
-    if ((screen as string) === 'stats') this.updateStats();
-    if ((screen as string) === 'achievements') this.updateAchievementsList();
   }
 
   private updateHUD() {
-    const doc = this.entries.hud?.doc;
-    if (!doc) return;
-    this.setText(doc, 'hud-score', 'Score: ' + gameState.score);
-    this.setText(doc, 'hud-level', 'Level ' + gameState.level);
-    this.setText(doc, 'hud-lives', 'Lives: ' + gameState.lives);
-    this.setText(doc, 'hud-pepper', 'Pepper: ' + gameState.peppers);
-    this.setText(doc, 'hud-combo', gameState.combo > 0 ? 'x' + gameState.combo + ' COMBO' : '');
-    if (gameState.mode === 'speed') {
-      this.setText(doc, 'hud-timer', 'Time: ' + Math.ceil(gameState.speedTimer) + 's');
+    this.setText('hud', 'hud-score', `SCORE: ${gameState.score}`);
+    this.setText('hud', 'hud-lives', `LIVES: ${gameState.lives}`);
+    this.setText('hud', 'hud-pepper', `PEPPER: ${gameState.peppers}`);
+    this.setText('hud', 'hud-level', `LEVEL ${gameState.level}`);
+    if (gameState.combo > 1) {
+      this.setText('hud', 'hud-combo', `COMBO x${gameState.combo}`);
     } else {
-      this.setText(doc, 'hud-timer', '');
+      this.setText('hud', 'hud-combo', '');
+    }
+    if (gameState.mode === 'speed') {
+      const t = Math.max(0, gameState.speedTimer);
+      this.setText('hud', 'hud-timer', `TIME: ${t.toFixed(1)}`);
+    } else {
+      this.setText('hud', 'hud-timer', '');
     }
   }
 
   private updateResults() {
-    const doc = this.entries.results?.doc;
-    if (!doc) return;
-    this.setText(doc, 'res-score', 'Score: ' + gameState.score);
-    this.setText(doc, 'res-level', 'Level: ' + gameState.level);
-    this.setText(doc, 'res-combo', 'Best Combo: x' + gameState.maxCombo);
-    this.setText(doc, 'res-best', 'Best Score: ' + gameState.bestScore);
+    this.setText('results', 'results-title', gameState.lives <= 0 ? 'GAME OVER' : 'LEVEL COMPLETE');
+    this.setText('results', 'results-score', `FINAL SCORE: ${gameState.score}`);
+    this.setText('results', 'results-level', `LEVEL REACHED: ${gameState.level}`);
+    this.setText('results', 'results-burgers', `CAREER BURGERS: ${gameState.totalBurgersAll}`);
+    this.setText('results', 'results-enemies', `CAREER STUNS: ${gameState.totalCrushAll}`);
+    this.setText('results', 'results-high', `HIGH SCORE: ${gameState.bestScore}`);
+    if (gameState.score >= gameState.bestScore && gameState.score > 0) {
+      this.setText('results', 'results-new', 'NEW HIGH SCORE!');
+    } else {
+      this.setText('results', 'results-new', '');
+    }
   }
 
   private updateStats() {
-    const doc = this.entries.stats?.doc;
-    if (!doc) return;
-    this.setText(doc, 'stat-games', 'Games Played: ' + gameState.totalGames);
-    this.setText(doc, 'stat-score', 'Total Score: ' + gameState.totalScoreAll);
-    this.setText(doc, 'stat-best', 'Best Score: ' + gameState.bestScore);
-    this.setText(doc, 'stat-level', 'Best Level: ' + gameState.bestLevel);
-    this.setText(doc, 'stat-burgers', 'Burgers Made: ' + gameState.totalBurgersAll);
-    this.setText(doc, 'stat-crush', 'Enemies Crushed: ' + gameState.totalCrushAll);
-    this.setText(doc, 'stat-pepper', 'Peppers Used: ' + gameState.totalPeppersAll);
-    this.setText(doc, 'stat-deaths', 'Deaths: ' + gameState.totalDeathsAll);
+    this.setText('stats', 'stat-games', `GAMES PLAYED: ${gameState.totalGames}`);
+    this.setText('stats', 'stat-high', `HIGH SCORE: ${gameState.bestScore}`);
+    this.setText('stats', 'stat-total', `TOTAL SCORE: ${gameState.totalScoreAll}`);
+    this.setText('stats', 'stat-burgers', `BURGERS COMPLETED: ${gameState.totalBurgersAll}`);
+    this.setText('stats', 'stat-enemies', `ENEMIES STUNNED: ${gameState.totalCrushAll}`);
+    this.setText('stats', 'stat-maxlevel', `BEST LEVEL: ${gameState.bestLevel}`);
+    this.setText('stats', 'stat-maxcombo', `BEST COMBO: ${gameState.bestCombo}x`);
+    this.setText('stats', 'stat-time', `TOTAL LEVELS: ${gameState.totalLevelsAll}`);
   }
 
-  private updateAchievementsList() {
-    const doc = this.entries.achv?.doc;
-    if (!doc) return;
-    const unlocked = gameState.achievementsUnlocked.length;
-    this.setText(doc, 'achv-count', unlocked + ' / ' + ACHIEVEMENTS.length);
-    for (let i = 0; i < 10 && i < ACHIEVEMENTS.length; i++) {
+  private updateAchievements() {
+    for (let i = 0; i < ACHIEVEMENTS.length && i < 5; i++) {
       const a = ACHIEVEMENTS[i];
-      const done = gameState.achievements[a.id];
-      const prefix = done ? '[X]' : '[ ]';
-      this.setText(doc, 'achv-' + i, prefix + ' ' + a.name + ' - ' + a.desc);
+      const unlocked = !!gameState.achievements[a.id];
+      this.setText('achv', `achv-${i}-name`, a.name);
+      this.setText('achv', `achv-${i}-desc`, a.desc);
+      this.setText('achv', `achv-${i}-status`, unlocked ? '[UNLOCKED]' : '[LOCKED]');
     }
+  }
+
+  private updateSettings() {
+    this.setText('settings', 'sfx-status', gameState.soundEnabled ? 'ON' : 'OFF');
+    this.setText('settings', 'music-status', gameState.musicEnabled ? 'ON' : 'OFF');
   }
 }

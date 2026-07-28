@@ -1,12 +1,8 @@
-<panel width="420" height="80" backgroundColor="#000000" backgroundOpacity="0.5" borderRadius="8" flexDirection="column" alignItems="center" padding="4">
-  <panel width="400" flexDirection="row" justifyContent="space-between" alignItems="center">
-    <text id="hud-score" content="Score: 0" fontSize="14" fontWeight="bold" color="#00ffcc"/>
-    <text id="hud-level" content="Level 1" fontSize="14" fontWeight="bold" color="#ffffff"/>
-    <text id="hud-lives" content="Lives: 3" fontSize="14" fontWeight="bold" color="#ff4444"/>
-  </panel>
-  <panel width="400" flexDirection="row" justifyContent="space-between" alignItems="center" marginTop="4">
-    <text id="hud-pepper" content="Pepper: 3" fontSize="11" color="#ffcc00"/>
-    <text id="hud-combo" content="" fontSize="12" fontWeight="bold" color="#ff8800"/>
-    <text id="hud-timer" content="" fontSize="11" color="#ff4444"/>
-  </panel>
+<panel width="600" height="60" background-color="#000a18" background-opacity="0.8" border-radius="8" border-color="#00ffcc" border-width="1" flex-direction="row" align-items="center" justify-content="space-between" padding="8">
+  <div id="hud-score" font-size="14" font-weight="bold" color="#00ffcc">SCORE: 0</div>
+  <div id="hud-level" font-size="14" color="#ffcc00">LEVEL 1</div>
+  <div id="hud-lives" font-size="14" color="#ff4444">LIVES: 3</div>
+  <div id="hud-pepper" font-size="14" color="#ff8800">PEPPER: 3</div>
+  <div id="hud-combo" font-size="14" font-weight="bold" color="#cc88ff"></div>
+  <div id="hud-timer" font-size="14" color="#ffffff"></div>
 </panel>

@@ -4,265 +4,223 @@
     "type": "custom",
     "children": [
       {
-        "sourceTag": "text",
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "HOW TO PLAY"
+        ],
+        "properties": {
+          "fontSize": "24",
+          "fontWeight": "bold",
+          "color": "#00ffcc",
+          "marginBottom": "8"
+        },
+        "dataUid": "uid-2"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Walk over burger ingredients"
+        ],
+        "properties": {
+          "fontSize": "14",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-3"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "to drop them onto the plate below."
+        ],
+        "properties": {
+          "fontSize": "14",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-4"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "CONTROLS:"
+        ],
+        "properties": {
+          "fontSize": "14",
+          "color": "#ffcc00",
+          "marginTop": "8"
+        },
+        "dataUid": "uid-5"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Arrow Keys / WASD - Move"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-6"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Space / F - Use Pepper"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-7"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Esc / P - Pause"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-8"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "ENEMIES:"
+        ],
+        "properties": {
+          "fontSize": "14",
+          "color": "#ff4444",
+          "marginTop": "8"
+        },
+        "dataUid": "uid-9"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Avoid Mr. Hot Dog, Mr. Pickle"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-10"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "and Mr. Egg!"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-11"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "TIPS:"
+        ],
+        "properties": {
+          "fontSize": "14",
+          "color": "#ff8800",
+          "marginTop": "8"
+        },
+        "dataUid": "uid-12"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Drop ingredients on enemies for"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-13"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "bonus points. Use pepper wisely!"
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-14"
+      },
+      {
+        "type": "container",
+        "sourceTag": "div",
+        "children": [
+          "Complete all burgers to advance."
+        ],
+        "properties": {
+          "fontSize": "12",
+          "color": "#ffffff"
+        },
+        "dataUid": "uid-15"
+      },
+      {
+        "sourceTag": "panel",
         "type": "custom",
         "children": [
           {
-            "sourceTag": "panel",
-            "type": "custom",
+            "type": "container",
+            "sourceTag": "div",
             "children": [
-              {
-                "sourceTag": "text",
-                "type": "custom",
-                "children": [
-                  {
-                    "sourceTag": "text",
-                    "type": "custom",
-                    "children": [
-                      {
-                        "sourceTag": "text",
-                        "type": "custom",
-                        "children": [],
-                        "properties": {
-                          "content": "onto the plate to complete a burger!",
-                          "fontsize": "11",
-                          "color": "#88ccaa"
-                        },
-                        "dataUid": "uid-6"
-                      }
-                    ],
-                    "properties": {
-                      "content": "platforms to drop them. Stack all layers",
-                      "fontsize": "11",
-                      "color": "#88ccaa"
-                    },
-                    "dataUid": "uid-5"
-                  }
-                ],
-                "properties": {
-                  "content": "GOAL: Walk over burger ingredients on",
-                  "fontsize": "11",
-                  "color": "#88ccaa"
-                },
-                "dataUid": "uid-4"
-              }
+              "BACK"
             ],
             "properties": {
-              "width": "380",
-              "backgroundcolor": "#001a0a",
-              "borderradius": "6",
-              "padding": "10",
-              "flexdirection": "column",
-              "gap": "6"
+              "fontSize": "14",
+              "color": "#00ffcc"
             },
-            "dataUid": "uid-3"
-          },
-          {
-            "sourceTag": "panel",
-            "type": "custom",
-            "children": [
-              {
-                "sourceTag": "text",
-                "type": "custom",
-                "children": [
-                  {
-                    "sourceTag": "text",
-                    "type": "custom",
-                    "children": [
-                      {
-                        "sourceTag": "text",
-                        "type": "custom",
-                        "children": [
-                          {
-                            "sourceTag": "text",
-                            "type": "custom",
-                            "children": [
-                              {
-                                "sourceTag": "text",
-                                "type": "custom",
-                                "children": [],
-                                "properties": {
-                                  "content": "Esc / P - Pause",
-                                  "fontsize": "10",
-                                  "color": "#88ccaa"
-                                },
-                                "dataUid": "uid-12"
-                              }
-                            ],
-                            "properties": {
-                              "content": "Space / F - Throw pepper (stuns enemies)",
-                              "fontsize": "10",
-                              "color": "#88ccaa"
-                            },
-                            "dataUid": "uid-11"
-                          }
-                        ],
-                        "properties": {
-                          "content": "Up/Down or W/S - Climb ladders",
-                          "fontsize": "10",
-                          "color": "#88ccaa"
-                        },
-                        "dataUid": "uid-10"
-                      }
-                    ],
-                    "properties": {
-                      "content": "Arrow Keys / WASD - Move left/right",
-                      "fontsize": "10",
-                      "color": "#88ccaa"
-                    },
-                    "dataUid": "uid-9"
-                  }
-                ],
-                "properties": {
-                  "content": "CONTROLS",
-                  "fontsize": "14",
-                  "fontweight": "bold",
-                  "color": "#ffcc00"
-                },
-                "dataUid": "uid-8"
-              }
-            ],
-            "properties": {
-              "width": "380",
-              "backgroundcolor": "#001a0a",
-              "borderradius": "6",
-              "padding": "10",
-              "flexdirection": "column",
-              "gap": "4",
-              "margintop": "4"
-            },
-            "dataUid": "uid-7"
-          },
-          {
-            "sourceTag": "panel",
-            "type": "custom",
-            "children": [
-              {
-                "sourceTag": "text",
-                "type": "custom",
-                "children": [
-                  {
-                    "sourceTag": "text",
-                    "type": "custom",
-                    "children": [
-                      {
-                        "sourceTag": "text",
-                        "type": "custom",
-                        "children": [
-                          {
-                            "sourceTag": "text",
-                            "type": "custom",
-                            "children": [
-                              {
-                                "sourceTag": "text",
-                                "type": "custom",
-                                "children": [],
-                                "properties": {
-                                  "content": "Drop ingredients ON enemies to crush them!",
-                                  "fontsize": "10",
-                                  "color": "#ffcc00"
-                                },
-                                "dataUid": "uid-18"
-                              }
-                            ],
-                            "properties": {
-                              "content": "Mr. Egg - Appears on higher levels",
-                              "fontsize": "10",
-                              "color": "#88ccaa"
-                            },
-                            "dataUid": "uid-17"
-                          }
-                        ],
-                        "properties": {
-                          "content": "Mr. Pickle - Climbs ladders quickly",
-                          "fontsize": "10",
-                          "color": "#88ccaa"
-                        },
-                        "dataUid": "uid-16"
-                      }
-                    ],
-                    "properties": {
-                      "content": "Mr. Hot Dog - Chases you on platforms",
-                      "fontsize": "10",
-                      "color": "#88ccaa"
-                    },
-                    "dataUid": "uid-15"
-                  }
-                ],
-                "properties": {
-                  "content": "ENEMIES",
-                  "fontsize": "14",
-                  "fontweight": "bold",
-                  "color": "#ff4444"
-                },
-                "dataUid": "uid-14"
-              }
-            ],
-            "properties": {
-              "width": "380",
-              "backgroundcolor": "#001a0a",
-              "borderradius": "6",
-              "padding": "10",
-              "flexdirection": "column",
-              "gap": "4",
-              "margintop": "4"
-            },
-            "dataUid": "uid-13"
-          },
-          {
-            "sourceTag": "panel",
-            "type": "custom",
-            "children": [
-              {
-                "sourceTag": "text",
-                "type": "custom",
-                "children": [],
-                "properties": {
-                  "content": "BACK",
-                  "fontsize": "12",
-                  "color": "#00ffcc"
-                },
-                "dataUid": "uid-20"
-              }
-            ],
-            "properties": {
-              "id": "btn-tutorial-back",
-              "width": "200",
-              "height": "36",
-              "backgroundcolor": "#001a0a",
-              "borderradius": "4",
-              "bordercolor": "#00ffcc",
-              "borderwidth": "1",
-              "alignitems": "center",
-              "justifycontent": "center",
-              "cursor": "pointer",
-              "margintop": "8"
-            },
-            "dataUid": "uid-19"
+            "dataUid": "uid-17"
           }
         ],
         "properties": {
-          "content": "HOW TO PLAY",
-          "fontsize": "24",
-          "fontweight": "bold",
-          "color": "#00ffcc",
-          "marginbottom": "8"
+          "id": "btn-tutorial-back",
+          "width": "240",
+          "height": "40",
+          "backgroundColor": "#004433",
+          "borderRadius": "6",
+          "borderColor": "#00ffcc",
+          "borderWidth": "1",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "cursor": "pointer",
+          "marginTop": "8"
         },
-        "dataUid": "uid-2"
+        "dataUid": "uid-16"
       }
     ],
     "properties": {
       "width": "420",
-      "height": "480",
-      "backgroundcolor": "#000a18",
-      "backgroundopacity": "0.95",
-      "borderradius": "12",
-      "bordercolor": "#00ffcc",
-      "borderwidth": "2",
-      "flexdirection": "column",
-      "alignitems": "center",
-      "padding": "16",
-      "gap": "6"
+      "height": "500",
+      "backgroundColor": "#000a18",
+      "backgroundOpacity": "0.95",
+      "borderRadius": "12",
+      "borderColor": "#00ffcc",
+      "borderWidth": "2",
+      "flexDirection": "column",
+      "alignItems": "center",
+      "padding": "20",
+      "gap": "8"
     },
     "dataUid": "uid-1"
   },
@@ -274,7 +232,7 @@
         "column": 0
       },
       "end": {
-        "line": 24,
+        "line": 18,
         "column": 8
       }
     },
@@ -284,8 +242,8 @@
         "column": 2
       },
       "end": {
-        "line": 24,
-        "column": 0
+        "line": 1,
+        "column": 92
       }
     },
     "uid-3": {
@@ -294,178 +252,148 @@
         "column": 2
       },
       "end": {
-        "line": 6,
-        "column": 10
+        "line": 2,
+        "column": 72
       }
     },
     "uid-4": {
       "start": {
         "line": 3,
-        "column": 4
+        "column": 2
       },
       "end": {
-        "line": 6,
-        "column": 2
+        "line": 3,
+        "column": 78
       }
     },
     "uid-5": {
       "start": {
         "line": 4,
-        "column": 4
+        "column": 2
       },
       "end": {
-        "line": 6,
-        "column": 2
+        "line": 4,
+        "column": 68
       }
     },
     "uid-6": {
       "start": {
         "line": 5,
-        "column": 4
+        "column": 2
       },
       "end": {
-        "line": 6,
-        "column": 2
+        "line": 5,
+        "column": 68
       }
     },
     "uid-7": {
+      "start": {
+        "line": 6,
+        "column": 2
+      },
+      "end": {
+        "line": 6,
+        "column": 66
+      }
+    },
+    "uid-8": {
       "start": {
         "line": 7,
         "column": 2
       },
       "end": {
-        "line": 13,
-        "column": 10
-      }
-    },
-    "uid-8": {
-      "start": {
-        "line": 8,
-        "column": 4
-      },
-      "end": {
-        "line": 13,
-        "column": 2
+        "line": 7,
+        "column": 59
       }
     },
     "uid-9": {
       "start": {
-        "line": 9,
-        "column": 4
+        "line": 8,
+        "column": 2
       },
       "end": {
-        "line": 13,
-        "column": 2
+        "line": 8,
+        "column": 67
       }
     },
     "uid-10": {
       "start": {
-        "line": 10,
-        "column": 4
+        "line": 9,
+        "column": 2
       },
       "end": {
-        "line": 13,
-        "column": 2
+        "line": 9,
+        "column": 73
       }
     },
     "uid-11": {
       "start": {
-        "line": 11,
-        "column": 4
+        "line": 10,
+        "column": 2
       },
       "end": {
-        "line": 13,
-        "column": 2
+        "line": 10,
+        "column": 56
       }
     },
     "uid-12": {
       "start": {
-        "line": 12,
-        "column": 4
+        "line": 11,
+        "column": 2
       },
       "end": {
-        "line": 13,
-        "column": 2
+        "line": 11,
+        "column": 64
       }
     },
     "uid-13": {
+      "start": {
+        "line": 12,
+        "column": 2
+      },
+      "end": {
+        "line": 12,
+        "column": 75
+      }
+    },
+    "uid-14": {
+      "start": {
+        "line": 13,
+        "column": 2
+      },
+      "end": {
+        "line": 13,
+        "column": 76
+      }
+    },
+    "uid-15": {
       "start": {
         "line": 14,
         "column": 2
       },
       "end": {
-        "line": 20,
+        "line": 14,
+        "column": 76
+      }
+    },
+    "uid-16": {
+      "start": {
+        "line": 15,
+        "column": 2
+      },
+      "end": {
+        "line": 17,
         "column": 10
       }
     },
-    "uid-14": {
-      "start": {
-        "line": 15,
-        "column": 4
-      },
-      "end": {
-        "line": 20,
-        "column": 2
-      }
-    },
-    "uid-15": {
+    "uid-17": {
       "start": {
         "line": 16,
         "column": 4
       },
       "end": {
-        "line": 20,
-        "column": 2
-      }
-    },
-    "uid-16": {
-      "start": {
-        "line": 17,
-        "column": 4
-      },
-      "end": {
-        "line": 20,
-        "column": 2
-      }
-    },
-    "uid-17": {
-      "start": {
-        "line": 18,
-        "column": 4
-      },
-      "end": {
-        "line": 20,
-        "column": 2
-      }
-    },
-    "uid-18": {
-      "start": {
-        "line": 19,
-        "column": 4
-      },
-      "end": {
-        "line": 20,
-        "column": 2
-      }
-    },
-    "uid-19": {
-      "start": {
-        "line": 21,
-        "column": 2
-      },
-      "end": {
-        "line": 23,
-        "column": 10
-      }
-    },
-    "uid-20": {
-      "start": {
-        "line": 22,
-        "column": 4
-      },
-      "end": {
-        "line": 23,
-        "column": 2
+        "line": 16,
+        "column": 50
       }
     }
   }

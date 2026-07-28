@@ -1,30 +1,22 @@
-<panel width="400" height="440" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#00ffcc" borderWidth="2" flexDirection="column" alignItems="center" padding="16" gap="8">
-  <text content="SETTINGS" fontSize="24" fontWeight="bold" color="#00ffcc" marginBottom="8"/>
-  <text id="set-diff" content="Difficulty: NORMAL" fontSize="13" color="#88ccaa"/>
-  <panel width="340" flexDirection="row" justifyContent="space-between" gap="6">
-    <panel id="btn-diff-normal" width="100" height="34" backgroundColor="#004433" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-      <text content="NORMAL" fontSize="10" color="#00ffcc"/>
-    </panel>
-    <panel id="btn-diff-hard" width="100" height="34" backgroundColor="#443300" borderRadius="4" borderColor="#ffcc00" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-      <text content="HARD" fontSize="10" color="#ffcc00"/>
-    </panel>
-    <panel id="btn-diff-insane" width="100" height="34" backgroundColor="#440000" borderRadius="4" borderColor="#ff4444" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-      <text content="INSANE" fontSize="10" color="#ff4444"/>
+<panel width="360" height="360" background-color="#000a18" background-opacity="0.95" border-radius="12" border-color="#00ffcc" border-width="2" flex-direction="column" align-items="center" padding="20" gap="10">
+  <div font-size="24" font-weight="bold" color="#00ffcc" margin-bottom="8">SETTINGS</div>
+  <panel width="280" flex-direction="row" justify-content="space-between" align-items="center" padding="4">
+    <div font-size="14" color="#ffffff">SOUND EFFECTS</div>
+    <panel id="btn-sfx-toggle" width="60" height="32" background-color="#004433" border-radius="4" border-color="#00ffcc" border-width="1" align-items="center" justify-content="center" cursor="pointer">
+      <div id="sfx-status" font-size="12" font-weight="bold" color="#00ffcc">ON</div>
     </panel>
   </panel>
-  <text id="set-sound" content="Sound: ON" fontSize="13" color="#88ccaa" marginTop="6"/>
-  <panel id="btn-sound" width="200" height="36" backgroundColor="#004433" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-    <text content="TOGGLE SOUND" fontSize="11" color="#00ffcc"/>
+  <panel width="280" flex-direction="row" justify-content="space-between" align-items="center" padding="4">
+    <div font-size="14" color="#ffffff">MUSIC</div>
+    <panel id="btn-music-toggle" width="60" height="32" background-color="#004433" border-radius="4" border-color="#00ffcc" border-width="1" align-items="center" justify-content="center" cursor="pointer">
+      <div id="music-status" font-size="12" font-weight="bold" color="#00ffcc">ON</div>
+    </panel>
   </panel>
-  <text id="set-music" content="Music: ON" fontSize="13" color="#88ccaa"/>
-  <panel id="btn-music" width="200" height="36" backgroundColor="#004433" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-    <text content="TOGGLE MUSIC" fontSize="11" color="#00ffcc"/>
+  <panel width="280" flex-direction="row" justify-content="space-between" align-items="center" padding="4">
+    <div font-size="14" color="#ffffff">DIFFICULTY</div>
+    <div font-size="14" color="#ffcc00">NORMAL</div>
   </panel>
-  <text id="set-color" content="Color: Neon Cyan" fontSize="13" color="#88ccaa"/>
-  <panel id="btn-color" width="200" height="36" backgroundColor="#004433" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
-    <text content="CHANGE COLOR" fontSize="11" color="#00ffcc"/>
-  </panel>
-  <panel id="btn-settings-back" width="200" height="36" backgroundColor="#001a0a" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer" marginTop="8">
-    <text content="BACK" fontSize="12" color="#00ffcc"/>
+  <panel id="btn-settings-back" width="240" height="40" background-color="#004433" border-radius="6" border-color="#00ffcc" border-width="1" align-items="center" justify-content="center" cursor="pointer" margin-top="12">
+    <div font-size="14" color="#00ffcc">BACK</div>
   </panel>
 </panel>

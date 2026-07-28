@@ -1,10 +1,12 @@
-<panel width="360" height="280" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#ffcc00" borderWidth="2" flexDirection="column" alignItems="center" padding="20" gap="12">
-  <text content="PAUSED" fontSize="28" fontWeight="bold" color="#ffcc00" marginBottom="8"/>
-  <text content="Game paused - take a break!" fontSize="11" color="#88aa66"/>
-  <panel id="btn-resume" width="240" height="44" backgroundColor="#00ffcc" borderRadius="6" alignItems="center" justifyContent="center" cursor="pointer" marginTop="8">
-    <text content="RESUME" fontSize="16" fontWeight="bold" color="#001a0a"/>
+<panel width="320" height="280" background-color="#000a18" background-opacity="0.95" border-radius="12" border-color="#ffcc00" border-width="2" flex-direction="column" align-items="center" padding="20" gap="12">
+  <div font-size="28" font-weight="bold" color="#ffcc00" margin-bottom="8">PAUSED</div>
+  <panel id="btn-resume" width="240" height="44" background-color="#00ffcc" border-radius="6" align-items="center" justify-content="center" cursor="pointer">
+    <div font-size="16" font-weight="bold" color="#001a0a">RESUME</div>
   </panel>
-  <panel id="btn-quit" width="240" height="44" backgroundColor="#ff4444" borderRadius="6" alignItems="center" justifyContent="center" cursor="pointer">
-    <text content="QUIT TO MENU" fontSize="14" fontWeight="bold" color="#1a0000"/>
+  <panel id="btn-restart" width="240" height="44" background-color="#004433" border-radius="6" border-color="#00ffcc" border-width="1" align-items="center" justify-content="center" cursor="pointer">
+    <div font-size="14" color="#00ffcc">RESTART</div>
+  </panel>
+  <panel id="btn-quit" width="240" height="44" background-color="#330000" border-radius="6" border-color="#ff4444" border-width="1" align-items="center" justify-content="center" cursor="pointer">
+    <div font-size="14" color="#ff4444">QUIT TO MENU</div>
   </panel>
 </panel>

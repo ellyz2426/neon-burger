@@ -5,7 +5,7 @@ import { gameState } from './game-state.js';
 
 export class InputSystem extends createSystem({}) {
   init() {
-    // No manual event listeners needed — use world.input API each frame
+    // No manual event listeners needed - use world.input API each frame
   }
 
   update() {

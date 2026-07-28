@@ -1,25 +1,19 @@
-<panel width="420" height="480" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#00ffcc" borderWidth="2" flexDirection="column" alignItems="center" padding="16" gap="6">
-  <text content="HOW TO PLAY" fontSize="24" fontWeight="bold" color="#00ffcc" marginBottom="8"/>
-  <panel width="380" backgroundColor="#001a0a" borderRadius="6" padding="10" flexDirection="column" gap="6">
-    <text content="GOAL: Walk over burger ingredients on" fontSize="11" color="#88ccaa"/>
-    <text content="platforms to drop them. Stack all layers" fontSize="11" color="#88ccaa"/>
-    <text content="onto the plate to complete a burger!" fontSize="11" color="#88ccaa"/>
-  </panel>
-  <panel width="380" backgroundColor="#001a0a" borderRadius="6" padding="10" flexDirection="column" gap="4" marginTop="4">
-    <text content="CONTROLS" fontSize="14" fontWeight="bold" color="#ffcc00"/>
-    <text content="Arrow Keys / WASD - Move left/right" fontSize="10" color="#88ccaa"/>
-    <text content="Up/Down or W/S - Climb ladders" fontSize="10" color="#88ccaa"/>
-    <text content="Space / F - Throw pepper (stuns enemies)" fontSize="10" color="#88ccaa"/>
-    <text content="Esc / P - Pause" fontSize="10" color="#88ccaa"/>
-  </panel>
-  <panel width="380" backgroundColor="#001a0a" borderRadius="6" padding="10" flexDirection="column" gap="4" marginTop="4">
-    <text content="ENEMIES" fontSize="14" fontWeight="bold" color="#ff4444"/>
-    <text content="Mr. Hot Dog - Chases you on platforms" fontSize="10" color="#88ccaa"/>
-    <text content="Mr. Pickle - Climbs ladders quickly" fontSize="10" color="#88ccaa"/>
-    <text content="Mr. Egg - Appears on higher levels" fontSize="10" color="#88ccaa"/>
-    <text content="Drop ingredients ON enemies to crush them!" fontSize="10" color="#ffcc00"/>
-  </panel>
-  <panel id="btn-tutorial-back" width="200" height="36" backgroundColor="#001a0a" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer" marginTop="8">
-    <text content="BACK" fontSize="12" color="#00ffcc"/>
+<panel width="420" height="500" background-color="#000a18" background-opacity="0.95" border-radius="12" border-color="#00ffcc" border-width="2" flex-direction="column" align-items="center" padding="20" gap="8">
+  <div font-size="24" font-weight="bold" color="#00ffcc" margin-bottom="8">HOW TO PLAY</div>
+  <div font-size="14" color="#ffffff">Walk over burger ingredients</div>
+  <div font-size="14" color="#ffffff">to drop them onto the plate below.</div>
+  <div font-size="14" color="#ffcc00" margin-top="8">CONTROLS:</div>
+  <div font-size="12" color="#ffffff">Arrow Keys / WASD - Move</div>
+  <div font-size="12" color="#ffffff">Space / F - Use Pepper</div>
+  <div font-size="12" color="#ffffff">Esc / P - Pause</div>
+  <div font-size="14" color="#ff4444" margin-top="8">ENEMIES:</div>
+  <div font-size="12" color="#ffffff">Avoid Mr. Hot Dog, Mr. Pickle</div>
+  <div font-size="12" color="#ffffff">and Mr. Egg!</div>
+  <div font-size="14" color="#ff8800" margin-top="8">TIPS:</div>
+  <div font-size="12" color="#ffffff">Drop ingredients on enemies for</div>
+  <div font-size="12" color="#ffffff">bonus points. Use pepper wisely!</div>
+  <div font-size="12" color="#ffffff">Complete all burgers to advance.</div>
+  <panel id="btn-tutorial-back" width="240" height="40" background-color="#004433" border-radius="6" border-color="#00ffcc" border-width="1" align-items="center" justify-content="center" cursor="pointer" margin-top="8">
+    <div font-size="14" color="#00ffcc">BACK</div>
   </panel>
 </panel>

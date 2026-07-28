@@ -18,7 +18,6 @@ async function main() {
     },
   });
 
-  const w = world as any;
   const { EnvironmentSystem } = await import('./environment-system.js');
   const { GameSystem } = await import('./game-system.js');
   const { InputSystem } = await import('./input-system.js');
@@ -26,12 +25,12 @@ async function main() {
   const { EffectsSystem } = await import('./effects-system.js');
   const { UISystem } = await import('./ui-system.js');
 
-  w.registerSystem(EnvironmentSystem);
-  w.registerSystem(GameSystem);
-  w.registerSystem(InputSystem);
-  w.registerSystem(AudioSystem);
-  w.registerSystem(EffectsSystem);
-  w.registerSystem(UISystem);
+  world.registerSystem(EnvironmentSystem);
+  world.registerSystem(GameSystem);
+  world.registerSystem(InputSystem);
+  world.registerSystem(AudioSystem);
+  world.registerSystem(EffectsSystem);
+  world.registerSystem(UISystem);
 }
 
 main().catch(console.error);

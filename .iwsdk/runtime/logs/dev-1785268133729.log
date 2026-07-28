@@ -1,0 +1,35 @@
+
+> neon-burger@1.0.0 dev:runtime
+> vite
+
+🚀 Generating initial UIKitML files for dev server...
+👁️  UIKitML file watcher started - monitoring for changes...
+
+  VITE v7.3.6  ready in 3809 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://198.19.0.2:5173/
+🖥️  IWSDK: Using SwiftShader (software rendering) — no GPU detected
+🗑️ UIKitML file unlink: ui/menu.uikitml
+➕ UIKitML file add: ui/menu.uikitml
+✅ UIKitML file recompiled: menu.uikitml
+7:49:53 PM [vite] (client) page reload src/ui-system.ts
+[browser] Failed to load resource: the server responded with a status of 404 (Not Found)
+[browser] TypeError: Failed to fetch dynamically imported module: http://localhost:5173/src/ui-system.ts?t=1785268193048
+7:50:05 PM [vite] (client) page reload src/ui-system.ts
+
+🥽 IWSDK Dev Summary (Development):
+  - Device: metaQuest3
+  - Runtime injected: 1120.1KB
+  - Activation mode: localhost
+  - AI: agent mode (WebSocket at /__iwer_mcp)
+  - Note: Runtime only activates on localhost/local networks
+
+
+🥽 IWSDK Dev Summary (Development):
+  - Device: metaQuest3
+  - Runtime injected: 1120.1KB
+  - Activation mode: localhost
+  - AI: agent mode (WebSocket at /__iwer_mcp)
+  - Note: Runtime only activates on localhost/local networks
+

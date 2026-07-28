@@ -1,0 +1,15 @@
+<panel width="400" height="380" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#00ffcc" borderWidth="2" flexDirection="column" alignItems="center" padding="20" gap="8">
+  <text content="GAME OVER" fontSize="28" fontWeight="bold" color="#ff4444" marginBottom="4"/>
+  <panel width="340" backgroundColor="#001a0a" borderRadius="6" padding="12" flexDirection="column" gap="6">
+    <text id="res-score" content="Score: 0" fontSize="16" fontWeight="bold" color="#00ffcc"/>
+    <text id="res-level" content="Level: 1" fontSize="14" color="#88ccaa"/>
+    <text id="res-combo" content="Best Combo: x0" fontSize="14" color="#ffcc00"/>
+    <text id="res-best" content="Best Score: 0" fontSize="14" color="#cc88ff"/>
+  </panel>
+  <panel id="btn-retry" width="240" height="44" backgroundColor="#00ffcc" borderRadius="6" alignItems="center" justifyContent="center" cursor="pointer" marginTop="8">
+    <text content="PLAY AGAIN" fontSize="16" fontWeight="bold" color="#001a0a"/>
+  </panel>
+  <panel id="btn-menu" width="240" height="40" backgroundColor="#004433" borderRadius="6" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+    <text content="MAIN MENU" fontSize="13" color="#00ffcc"/>
+  </panel>
+</panel>

@@ -1,0 +1,32 @@
+<panel width="400" height="460" backgroundColor="#000a18" backgroundOpacity="0.95" borderRadius="12" borderColor="#00ffcc" borderWidth="2" flexDirection="column" alignItems="center" padding="20" gap="10">
+  <text content="NEON BURGER" fontSize="32" fontWeight="bold" color="#00ffcc" marginBottom="2"/>
+  <text content="VR" fontSize="16" color="#ffcc00" marginBottom="12"/>
+  <panel id="btn-arcade" width="280" height="48" backgroundColor="#00ffcc" borderRadius="6" alignItems="center" justifyContent="center" cursor="pointer">
+    <text content="ARCADE MODE" fontSize="18" fontWeight="bold" color="#001a0a"/>
+  </panel>
+  <panel id="btn-speed" width="280" height="44" backgroundColor="#004433" borderRadius="6" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+    <text content="SPEED RUN" fontSize="15" color="#00ffcc"/>
+  </panel>
+  <panel id="btn-zen" width="280" height="44" backgroundColor="#004433" borderRadius="6" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+    <text content="ZEN MODE" fontSize="15" color="#00ffcc"/>
+  </panel>
+  <panel id="btn-challenge" width="280" height="44" backgroundColor="#004433" borderRadius="6" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+    <text content="CHALLENGE" fontSize="15" color="#00ffcc"/>
+  </panel>
+  <panel width="280" flexDirection="row" justifyContent="space-between" gap="8" marginTop="4">
+    <panel id="btn-tutorial" width="132" height="38" backgroundColor="#001a0a" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+      <text content="HOW TO PLAY" fontSize="11" color="#00ffcc"/>
+    </panel>
+    <panel id="btn-settings" width="132" height="38" backgroundColor="#001a0a" borderRadius="4" borderColor="#00ffcc" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+      <text content="SETTINGS" fontSize="11" color="#00ffcc"/>
+    </panel>
+  </panel>
+  <panel width="280" flexDirection="row" justifyContent="space-between" gap="8">
+    <panel id="btn-stats" width="132" height="38" backgroundColor="#001a0a" borderRadius="4" borderColor="#cc88ff" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+      <text content="STATISTICS" fontSize="11" color="#cc88ff"/>
+    </panel>
+    <panel id="btn-achv" width="132" height="38" backgroundColor="#001a0a" borderRadius="4" borderColor="#ffcc00" borderWidth="1" alignItems="center" justifyContent="center" cursor="pointer">
+      <text content="ACHIEVEMENTS" fontSize="11" color="#ffcc00"/>
+    </panel>
+  </panel>
+</panel>

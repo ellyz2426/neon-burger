@@ -1,0 +1,12 @@
+<panel width="420" height="80" backgroundColor="#000000" backgroundOpacity="0.5" borderRadius="8" flexDirection="column" alignItems="center" padding="4">
+  <panel width="400" flexDirection="row" justifyContent="space-between" alignItems="center">
+    <text id="hud-score" content="Score: 0" fontSize="14" fontWeight="bold" color="#00ffcc"/>
+    <text id="hud-level" content="Level 1" fontSize="14" fontWeight="bold" color="#ffffff"/>
+    <text id="hud-lives" content="Lives: 3" fontSize="14" fontWeight="bold" color="#ff4444"/>
+  </panel>
+  <panel width="400" flexDirection="row" justifyContent="space-between" alignItems="center" marginTop="4">
+    <text id="hud-pepper" content="Pepper: 3" fontSize="11" color="#ffcc00"/>
+    <text id="hud-combo" content="" fontSize="12" fontWeight="bold" color="#ff8800"/>
+    <text id="hud-timer" content="" fontSize="11" color="#ff4444"/>
+  </panel>
+</panel>

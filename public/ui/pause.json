@@ -1,0 +1,180 @@
+{
+  "element": {
+    "sourceTag": "panel",
+    "type": "custom",
+    "children": [
+      {
+        "sourceTag": "text",
+        "type": "custom",
+        "children": [
+          {
+            "sourceTag": "text",
+            "type": "custom",
+            "children": [
+              {
+                "sourceTag": "panel",
+                "type": "custom",
+                "children": [
+                  {
+                    "sourceTag": "text",
+                    "type": "custom",
+                    "children": [],
+                    "properties": {
+                      "content": "RESUME",
+                      "fontsize": "16",
+                      "fontweight": "bold",
+                      "color": "#001a0a"
+                    },
+                    "dataUid": "uid-5"
+                  }
+                ],
+                "properties": {
+                  "id": "btn-resume",
+                  "width": "240",
+                  "height": "44",
+                  "backgroundcolor": "#00ffcc",
+                  "borderradius": "6",
+                  "alignitems": "center",
+                  "justifycontent": "center",
+                  "cursor": "pointer",
+                  "margintop": "8"
+                },
+                "dataUid": "uid-4"
+              },
+              {
+                "sourceTag": "panel",
+                "type": "custom",
+                "children": [
+                  {
+                    "sourceTag": "text",
+                    "type": "custom",
+                    "children": [],
+                    "properties": {
+                      "content": "QUIT TO MENU",
+                      "fontsize": "14",
+                      "fontweight": "bold",
+                      "color": "#1a0000"
+                    },
+                    "dataUid": "uid-7"
+                  }
+                ],
+                "properties": {
+                  "id": "btn-quit",
+                  "width": "240",
+                  "height": "44",
+                  "backgroundcolor": "#ff4444",
+                  "borderradius": "6",
+                  "alignitems": "center",
+                  "justifycontent": "center",
+                  "cursor": "pointer"
+                },
+                "dataUid": "uid-6"
+              }
+            ],
+            "properties": {
+              "content": "Game paused - take a break!",
+              "fontsize": "11",
+              "color": "#88aa66"
+            },
+            "dataUid": "uid-3"
+          }
+        ],
+        "properties": {
+          "content": "PAUSED",
+          "fontsize": "28",
+          "fontweight": "bold",
+          "color": "#ffcc00",
+          "marginbottom": "8"
+        },
+        "dataUid": "uid-2"
+      }
+    ],
+    "properties": {
+      "width": "360",
+      "height": "280",
+      "backgroundcolor": "#000a18",
+      "backgroundopacity": "0.95",
+      "borderradius": "12",
+      "bordercolor": "#ffcc00",
+      "borderwidth": "2",
+      "flexdirection": "column",
+      "alignitems": "center",
+      "padding": "20",
+      "gap": "12"
+    },
+    "dataUid": "uid-1"
+  },
+  "classes": {},
+  "ranges": {
+    "uid-1": {
+      "start": {
+        "line": 0,
+        "column": 0
+      },
+      "end": {
+        "line": 9,
+        "column": 8
+      }
+    },
+    "uid-2": {
+      "start": {
+        "line": 1,
+        "column": 2
+      },
+      "end": {
+        "line": 9,
+        "column": 0
+      }
+    },
+    "uid-3": {
+      "start": {
+        "line": 2,
+        "column": 2
+      },
+      "end": {
+        "line": 9,
+        "column": 0
+      }
+    },
+    "uid-4": {
+      "start": {
+        "line": 3,
+        "column": 2
+      },
+      "end": {
+        "line": 5,
+        "column": 10
+      }
+    },
+    "uid-5": {
+      "start": {
+        "line": 4,
+        "column": 4
+      },
+      "end": {
+        "line": 5,
+        "column": 2
+      }
+    },
+    "uid-6": {
+      "start": {
+        "line": 6,
+        "column": 2
+      },
+      "end": {
+        "line": 8,
+        "column": 10
+      }
+    },
+    "uid-7": {
+      "start": {
+        "line": 7,
+        "column": 4
+      },
+      "end": {
+        "line": 8,
+        "column": 2
+      }
+    }
+  }
+}

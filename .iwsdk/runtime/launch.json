@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
   "workspaceRoot": "/home/hatch/workspace/neon-burger",
-  "pid": 17682,
+  "pid": 19780,
   "command": "npm",
   "args": [
     "run",
     "dev:runtime"
   ],
-  "logPath": "/home/hatch/workspace/neon-burger/.iwsdk/runtime/logs/dev-1785269147266.log",
+  "logPath": "/home/hatch/workspace/neon-burger/.iwsdk/runtime/logs/dev-1785269457171.log",
   "scriptName": "dev:runtime",
   "port": 5173,
   "openBrowser": false,
-  "createdAt": "2026-07-28T20:06:00.013Z"
+  "createdAt": "2026-07-28T20:11:07.167Z"
 }

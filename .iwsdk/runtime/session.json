@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "sessionId": "7fe9ce1a-832a-4447-9f5e-b636424ef8ca",
+  "sessionId": "86307b4d-ceb0-450c-bb41-02a2aa9b5f4f",
   "workspaceRoot": "/home/hatch/workspace/neon-burger",
-  "pid": 17682,
+  "pid": 19780,
   "port": 5173,
   "localUrl": "http://localhost:5173/",
   "networkUrls": [
@@ -12,12 +12,12 @@
   "browser": {
     "status": "connected",
     "connected": true,
-    "commandReady": true,
+    "commandReady": false,
     "connectedClientCount": 1,
-    "lastTransitionAt": "2026-07-28T20:06:10.617Z",
-    "lastBridgeConnectedAt": "2026-07-28T20:05:59.685Z",
-    "lastCommandReadyAt": "2026-07-28T20:06:10.617Z"
+    "lastTransitionAt": "2026-07-28T20:11:50.529Z",
+    "lastBridgeConnectedAt": "2026-07-28T20:11:50.529Z",
+    "lastCommandReadyAt": "2026-07-28T20:11:15.005Z"
   },
-  "registeredAt": "2026-07-28T20:05:54.165Z",
-  "updatedAt": "2026-07-28T20:06:10.632Z"
+  "registeredAt": "2026-07-28T20:11:02.311Z",
+  "updatedAt": "2026-07-28T20:11:50.535Z"
 }
